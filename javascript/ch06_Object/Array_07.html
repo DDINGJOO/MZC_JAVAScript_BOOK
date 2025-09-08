@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Filter</title>
+</head>
+<body>
+    <script>
+        const users = [
+            {firstName : "길동",
+                lastName : "일",
+                age : 10},
+            {firstName : "길동",
+                lastName : "이",
+                age : 20},
+            {firstName : "길동",
+                lastName : "삼",
+                age : 30},
+            {firstName : "길동",
+                lastName : "사",
+                age : 40},
+        ];
+
+
+        const filteredUsers = (users.filter(
+            (user) => user.age >= 20
+        ))
+
+        filteredUsers.forEach(
+            user => console.log(`username : ${user.lastName} ${user.firstName},\nage : ${user.age}`)
+        )
+
+    </script>
+
+</body>
+</html>

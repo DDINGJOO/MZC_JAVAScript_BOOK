@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Array</title>
+</head>
+<body>
+    <script>
+        const users = [
+            {firstName : "길동",
+            lastName : "일",
+            age : 20},
+            {firstName : "길동",
+                lastName : "이",
+                age : 21},
+            {firstName : "길동",
+                lastName : "삼",
+                age : 22},
+            {firstName : "길동",
+                lastName : "사",
+                age : 11},
+        ];
+
+
+
+        const result = users.map(
+            (e) => {
+                    return{
+                        fullName: e.lastName + e.firstName,
+                        age: e.age,
+                    };
+            }
+        )
+
+        result.forEach(
+            (user) => {
+                console.log(`${user.fullName} : ${user.age}`);
+            }
+        )
+
+
+
+
+
+    </script>
+</body>
+</html>

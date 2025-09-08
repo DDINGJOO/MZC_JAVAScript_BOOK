@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example of Array</title>
+</head>
+<body>
+    <script>
+        const colors = ["red", "green", "blue","green", "DDing"];
+
+        // for Each
+
+        console.log('print forEach(element)')
+        colors.forEach(
+            (color ) => {
+                console.log(` color : ${color}`)}
+        )
+
+        console.log("---------------------------------------")
+        console.log('print forEach(element, index)')
+        colors.forEach(
+            (color, index ) => {
+                console.log(`index : ${index} color : ${color}`)}
+        )
+
+        console.log("---------------------------------------")
+        console.log('print forEach(element, index, array)')
+        colors.forEach(
+            (color, index, array ) => {
+                console.log(`index : ${index} color : ${color} nextId : ${array.length}`)}
+        )
+
+
+    </script>
+
+</body>
+</html>

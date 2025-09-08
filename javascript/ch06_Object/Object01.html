@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Object</title>
+</head>
+<body>
+    <script>
+        // create Object object
+            // 객체 리터럴을 이용한 객체 생성
+        const user  = {
+            username : 'Alice',
+            age : 10,
+            email: 'java@gmail.com',
+        };
+
+        console.log('data type');
+        console.log('user : ',typeof user); // user : object
+        console.log('user: ', toString.call(user)); // user: [object Object]
+
+        console.log('--------------------------------')
+
+        console.log('print object field using template literal')
+        // 객체 내의 속성 출력
+            // print using template literal
+        console.log(`username : ${user.username}`);
+        console.log(`age : ${user.age}`);
+        console.log(`email : ${user.email}`);
+        console.log('--------------------------------')
+
+
+
+            // print using for in loop
+        console.log('print object field using for in loop')
+        for(let key in user){
+            console.log(`${key} : ${user[key]}`);
+        }
+
+        console.log('--------------------------------')
+        console.log('print object field using square bracket')
+        console.log(`username : ${user['username']}`);
+        console.log(`age : ${user['age']}`);
+        console.log(`email : ${user['email']}`);
+
+
+
+
+
+    </script>
+
+</body>
+</html>

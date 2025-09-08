@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Map</title>
+</head>
+<body>
+    <script>
+        const colors = ["red", "green", "blue","green", "DDing"];
+
+        // Map을 이용해 배열내 문자를 대문자로 바꾸기
+        const upperColors = colors.map(
+            (color) => {return color.toUpperCase()} //return color.toUpperCase()
+        )
+
+        const upperColors1 = colors.map(
+            (color) => color.toUpperCase() // return color.toUpperCase()
+        )
+
+        const upperColors2 = colors.map(
+            (color) => {color.toUpperCase()} // return undefined
+        )
+
+        console.log(colors.join(",")) // consts
+        console.log( upperColors.join(","))
+        console.log( upperColors1.join(","))
+        console.log( upperColors2.join(","))
+
+
+    </script>
+
+</body>
+</html>

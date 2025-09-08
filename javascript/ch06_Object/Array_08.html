@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Reduce</title>
+</head>
+<body>
+    <script>
+        const intArr = [1,2,3,4,5,6,7,8,9,10];
+
+        const result = intArr.reduce(
+            (prev, curr) => {
+                console.log(`prev : ${prev} curr : ${curr}`)
+                return prev + curr;
+            },0
+        )
+        console.log(result);
+
+
+    </script>
+</body>
+</html>

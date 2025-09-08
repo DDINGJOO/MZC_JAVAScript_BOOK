@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Array</title>
+</head>
+<body>
+    <script>
+        const str = 'banana';
+
+        const charArr = str.split('');
+        console.log('arr : ' , toString.call(charArr) ); // object Array
+        console.log('arr : ', charArr.join(',')); // b,a,n,a,a
+
+
+        console.log(
+            charArr.filter(
+            (e) => e === 'a'
+        ).length); // 3
+
+
+    </script>
+
+</body>
+</html>
