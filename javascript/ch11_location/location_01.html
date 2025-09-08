@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of BOM(location)</title>
+</head>
+<body>
+    <button id = 'GoogleBtn'>Google</button>
+    <button id = 'reload'>Reload</button>
+    <script>
+        const googleBtn = document.getElementById('GoogleBtn');
+        const reload = document.getElementById('reload');
+
+
+        googleBtn.addEventListener('click' , () => {
+            // window.location.href = 'https://www.google.com';
+            // location.assign('https://www.google.com');
+            // location.href = 'https://www.google.com';
+
+
+            location.replace('https://www.google.com'); // 뒤로가기 X^
+            }
+        );
+        reload.addEventListener('click' ,() => {
+            location.reload();
+        })
+
+    </script>
+
+</body>
+</html>
