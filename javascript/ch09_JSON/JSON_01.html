@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of JSON(JS Object Notation</title>
+</head>
+<body>
+<script>
+    const user = {
+        username : 'Alice',
+        age : 10,
+        email : 'java@gmail.com'
+    };
+    console.log(user);
+    console.log(typeof user);
+    console.log(toString.call(user));
+
+
+
+
+
+    const jsonUser = JSON.stringify(user);
+    console.log(jsonUser);
+    console.log(typeof jsonUser); // string
+    console.log(toString.call(jsonUser)) // [object String]
+    console.log(jsonUser.username)// undefined
+
+    const deserializeUser = JSON.parse(jsonUser);
+    console.log(deserializeUser);
+    console.log(typeof deserializeUser); // object
+    console.log(toString.call(deserializeUser)); // [object Object]
+    console.log(deserializeUser.username);// Alice
+</script>
+
+</body>
+</html>
