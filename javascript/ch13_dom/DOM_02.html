@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of DOM (Document object Model</title>
+    <style>
+        .red{
+            color : red;
+            font-weight : bold;
+        }
+        .blue{
+            color : blue;
+            font-weight : bold;
+        }
+    </style>
+</head>
+    <body>
+        <ul>
+            <li class = 'red'>Apple</li>
+            <li class = 'red'>Banana</li>
+            <li class = 'red'>Cherry</li>
+            <li class = 'red'>Shin musket</li>
+        </ul>
+
+        <script>
+            const elements = document.getElementsByClassName('red');
+            console.log(elements);
+
+            // change the color of all the elements
+            for (const element of elements) {
+                element.className = 'blue';
+            } // red -> blue , red , red -> blue , red
+
+            const newElements = document.getElementsByClassName('red');
+            console.log(newElements);
+
+
+            const newNewElements = document.getElementsByClassName('blue');
+            console.log(newNewElements);
+
+        </script>
+
+    </body>
+</html>

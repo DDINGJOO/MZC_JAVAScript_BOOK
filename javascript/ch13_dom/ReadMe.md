@@ -37,11 +37,16 @@
 
 - getElementById() : document 를 기준으로 쭉 돌아서 id 검색해서 쳦아옴 -> id 가 유니크 해야하는 이유 
 모든 노드는 ID를 가질 수 있음
-- getElementByTagName()
-- querySelector()
-- querySelectorAll()
-- getElementByClassName()
+- getElementByTagName() // NodeList
+- querySelector() // Element
+- querySelectorAll() // NodeList
+- getElementByClassName() // HTML Collection
 
 
 
-- NodeList vs HTMLCollection : 실시간성, HTMLCollection 을 그래서 라이브 리스트라고도함 
+- NodeList vs HTMLCollection : 실시간성, HTMLCollection 을 그래서 라이브 리스트라고도함
+
+
+
+- 클래스 이름 바꿀때 리스트에서 빨빨빨빨 -> 빨파빨파 로 바뀌는 이유 라이브 객체라 
+  - 설명은 나중에 블로그에서 친절하게 해줄거야

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4. 문자열 배열을 모두 대문자로 변환하기 (toUpperCaseArray)</title>
+</head>
+<body>
+<script>
+
+    const users = [
+        { name: 'Alice', age: 20 },
+        { name: 'Bob', age: 25 }
+    ];
+
+
+
+    for(let user of users) {
+        user.name = user.name.toUpperCase();
+    }
+
+
+
+    console.log(users);
+
+</script>
+</body>
+</html>
