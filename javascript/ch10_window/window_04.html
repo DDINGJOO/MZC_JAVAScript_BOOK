@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Bom(window)</title>
+</head>
+<body>
+    <div id="dateTime"></div>
+    <buttom id = 'startBtn'> Start</buttom>
+    <button id = 'stopBtn'>Stop</button>
+
+
+    <script>
+        const div = document.getElementById('dateTime');
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        let timerId = null;
+
+        startBtn.addEventListener('click',
+            () => {
+                showDateTime();
+                timerId = window.setInterval(showDateTime, 1000);
+            });
+
+
+        function showDateTime(){
+            const now = new Date();
+            let htmlStr = '<p>';
+            htmlStr += `${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()} `;
+            htmlStr += `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+            htmlStr += '</p>';
+            div.innerHTML= htmlStr;
+        }
+
+        stopBtn.addEventListener("click",
+            () => {
+               if(timerId){
+                    window.clearInterval(timerId);
+                    timerId = null;
+                }
+            }
+        )
+
+
+
+
+    </script>
+</body>
+</html>

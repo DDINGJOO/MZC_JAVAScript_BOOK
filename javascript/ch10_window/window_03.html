@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Bom(window)</title>
+</head>
+<body>
+<button id = "btn">Stop</button>
+<script>
+    const btn = document.getElementById('btn');
+
+    const timerId = setInterval(
+        () => {
+            console.log("call setInterval callback");
+        },5000); //5초마다 수행
+
+
+    btn.addEventListener("click" , () => {
+        if(timerId){
+             clearInterval(timerId);
+         }
+    });
+</script>
+
+</body>
+</html>

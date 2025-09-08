@@ -5,8 +5,13 @@
     <title>Examples of Bom(window)</title>
 </head>
 <body>
+    <button id = "btn">Stop</button>
     <script>
-
+        const btn = document.getElementById('btn');
+        setTimeout(
+            () => {
+                console.log("call setTimeout callback");
+            },2000); //2초 이후 실행.
     </script>
 
 </body>
