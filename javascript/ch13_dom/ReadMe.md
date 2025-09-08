@@ -28,3 +28,20 @@
 
 
 - Node 하위에 Element, Attribute.. 있어서 엘리먼트 노드, 어트리뷰트 노드 하고 하기도하고, 노드 느낌 이기도 하고 . 
+
+
+
+---
+
+## 노드 취득 방법 
+
+- getElementById() : document 를 기준으로 쭉 돌아서 id 검색해서 쳦아옴 -> id 가 유니크 해야하는 이유 
+모든 노드는 ID를 가질 수 있음
+- getElementByTagName()
+- querySelector()
+- querySelectorAll()
+- getElementByClassName()
+
+
+
+- NodeList vs HTMLCollection : 실시간성, HTMLCollection 을 그래서 라이브 리스트라고도함 
