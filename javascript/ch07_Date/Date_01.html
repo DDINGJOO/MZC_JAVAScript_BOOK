@@ -5,31 +5,31 @@
     <title>Example of Date</title>
 </head>
 <body>
-    <div id = 'div'></div>
-    <script>
+<div id = 'div'></div>
+<script>
 
 
 
 
-        // Date 객체 생성
-        const now = new Date();
-        const year = now.getFullYear();
-        const month = now.getMonth() + 1;
-        const date = now.getDate();
-        const hour = now.getHours();
-        const minute = now.getMinutes();
-        const second = now.getSeconds();
-        const day = now.getDay();
+    // Date 객체 생성
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1;
+    const date = now.getDate();
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+    const second = now.getSeconds();
+    const day = now.getDay();
 
-        const yoil  = ['일','월','화','수','목','금','토']
+    const yoil  = ['일','월','화','수','목','금','토']
 
-        console.log(now);
-        console.log( year, month, date, hour, minute, second, day);
+    console.log(now);
+    console.log( year, month, date, hour, minute, second, day);
 
 
-        const divElement = document.getElementById('div');
-        divElement.innerHTML = `${year}-${month}-${date}${yoil[day]}T${hour}:${minute}:${second}`
-    </script>
+    const divElement = document.getElementById('div');
+    divElement.innerHTML = `${year}-${month}-${date}${yoil[day]}T${hour}:${minute}:${second}`
+</script>
 
 </body>
 </html>
