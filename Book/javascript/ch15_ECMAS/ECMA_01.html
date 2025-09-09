@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of ECMAScript</title>
+</head>
+    <body>
+        <script>
+            function hello(username){
+                username = username || 'Guest' // if username is undefined, set username to 'Guest'
+                console.log('username : ', username)
+            }
+
+            hello() // Guest
+            hello('John') // John
+
+
+
+            //Default Function parameter
+            function hello_es6(username = 'Guest'){
+                console.log('username : ', username)
+            }
+            hello() // Guest
+        </script>
+
+
+    </body>
+</html>
