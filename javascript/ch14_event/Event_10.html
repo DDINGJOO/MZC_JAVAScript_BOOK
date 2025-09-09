@@ -46,17 +46,31 @@
 
 
 
-    div1.addEventListener('click', () => {
-
-    });
-
     div2.addEventListener('click', (e) => {
 
+        console.log(e.target.id);
+        console.log(e.currentTarget); // Only div1 <- 이벤트 발행 주체는 div1이니까
+        if(e.target.id === 'div3'){
+            e.style.backgroundColor = 'green';
+        }
+        else if(e.target.id === 'div2'){
+            e.style.backgroundColor = 'red';
 
-    });
-    div3.addEventListener('click', () => {
+        }else
+        {
+            e.style.backgroundColor = 'red';
+        }
+    },false); // 이벤트 위임
 
-    });
+
+    // //div1 누르면 아무것도 안일어남
+    // div2.addEventListener('click', (e) => {
+    //
+    //     console.log(e.target.id);
+    //     console.log(e.currentTarget); // Only div1 <- 이벤트 발행 주체는 div1이니까
+    //
+    // },false); // 이벤트 위임
+
 
 
 </script>

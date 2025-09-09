@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of JavaScript Event Propagation</title>
+
+
+</head>
+    <body>
+        <ul>
+            <li id ='item1'>item-1</li>
+            <li id = 'item2'>item-2</li>
+            <li id ='item3'>item-3</li>
+        </ul>
+        <script>
+            const item1 = document.getElementById('item1');
+            const item2= document.getElementById('item2');
+            const item3= document.getElementById('item3');
+
+            item1.parentElement.addEventListener('click', (e) => {
+                if(e.target.id === 'item1'){
+                    e.target.style.color = 'red'//change textColor
+                }
+                else if(e.target.id === 'item2'){
+                    e.target.style.color = 'blue'
+                }
+
+                else if (e.target.id === 'item3'){
+                    e.target.style.color = 'green'
+                }
+            },false)
+
+
+        </script>
+    </body>
+</html>
