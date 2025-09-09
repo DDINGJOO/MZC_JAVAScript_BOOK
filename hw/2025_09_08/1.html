@@ -9,7 +9,23 @@
         const number = [1, 2, 2, 3,4,4, 5];
 
 
-        console.log(Array.from(new Set(number)));
+        console.log(Array.from(new Set(number))); // Set 을 이용한 배열 정답코드
+        const temp = new Set(number); // Set(5) {1,2,3,4,5}
+        console.log(Array.isArray(temp)); // false
+
+        // toArray
+        console.log(Array.from(temp));
+        console.log(Array.isArray(Array.from(temp))); // true
+
+
+
+
+
+        console.log(number.filter(
+            (e,i, arr) => {
+                return arr.indexOf(e) === i;
+            }
+        )); // filter를 사용한 정답 코드
 
 
     </script>
