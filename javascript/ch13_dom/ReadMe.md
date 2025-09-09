@@ -50,3 +50,33 @@
 
 - 클래스 이름 바꿀때 리스트에서 빨빨빨빨 -> 빨파빨파 로 바뀌는 이유 라이브 객체라 
   - 설명은 나중에 블로그에서 친절하게 해줄거야
+
+
+
+---
+
+## 노드 관리 메소드 정리 
+	
+- createElement()  <- return : element , parm : tagName
+- createAttribute() <- return : attribute, parm : name
+- createTextNode() <- return : textNode, parm : text
+
+
+
+- insertBefore() <- return : element , parm : newElement, referenceElement
+- appendChild() <- return : element , parm : newElement
+
+
+- removeChild() <- return : element , parm : element
+- replaceChild() <- return : element , parm : newElement, referenceElement
+- cloneNode() <- return : element , parm : deep
+
+
+- setAttribute() <- return : element , parm : name, value
+- getAttribute() <- return : value , parm : name
+- removeAttribute() <- return : element , parm : name
+- hasAttribute() <- return : boolean , parm : name
+
+
+- innerHTML <- return : string , parm : html
+
