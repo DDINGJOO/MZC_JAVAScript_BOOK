@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Dom</title>
+    <style>
+        .red{
+            color : red;
+            font-weight : bold;
+        }
+        .blue{
+            color : blue;
+            font-weight : bold;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class = 'red'>Apple</li>
+        <li class = 'red'>Banana</li>
+        <li class = 'red'>Cherry</li>
+        <li class = 'red'>Shin musket</li>
+    </ul>
+    <script>
+        const result = document.querySelectorAll('.red');
+        console.log('result : ',result); // NodeList(4)
+        console.log(typeof result); // object
+        console.log(toString.call(result)) // [object NodeList]
+
+
+        console.log(Array.isArray(result)); // false
+        console.log(result instanceof Array); // false
+        console.log(result instanceof NodeList); // true
+
+
+        const arr = Array.from(result); // [li.red, li.red, li.red, li.red]
+        console.log(arr);  // [li.red, li.red, li.red, li.red]
+        console.log(typeof arr); // object
+        console.log(toString.call(arr)); // [object Array]
+        console.log(arr instanceof Array); // true
+        console.log(arr instanceof NodeList) // false
+        console.log(arr.length);// 4
+        console.log(Array.isArray([...result])) // true
+
+
+
+        Array.from(result).forEach( (e) => {
+            e.className = 'blue';
+            }
+        ); // 실시간성 반영
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Dom</title>
+</head>
+<body>
+    <p>Hello</p>
+    <p>Hi</p>
+
+
+    <script>
+        const pElements = document.getElementsByTagName('p');
+        console.log(pElements);
+        console.log(typeof pElements);
+        console.log(toString.call(pElements));
+
+        Array.from(pElements).forEach(
+            (e) =>
+            {
+                console.log('---------------------------')
+                console.log('tagName: ' + e.tagName);
+                console.log('nodeName: ' + e.nodeName);
+                console.log('nodeValue: ' + e.nodeValue);
+                console.log('nodeType: ' + e.nodeType);
+                console.log('textContent: ' + e.textContent)
+                console.log('innerHTML: ' + e.innerHTML)
+
+            }
+        )
+
+
+    </script>
+</body>
+</html>

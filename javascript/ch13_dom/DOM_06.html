@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of DOM</title>
+</head>
+<body>
+    <buttom id ='btn'>아이템 추가</buttom>
+    <div id = 'div'></div>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const div = document.getElementById('div');
+
+
+        const increase = (function() {
+            let count = 1;
+            return function() {
+                return count++;
+            };
+        })();
+
+
+        function addItem(){
+            function createItem() {
+                const pElement = document.createElement('p');
+                const count = increase();
+                const textNode = document.createTextNode(`item-${count}`);
+                pElement.appendChild(textNode);
+                div.appendChild(pElement);
+            }
+            return createItem;
+        }
+
+        btn.addEventListener('click', () => {
+            const createItem = addItem();
+            createItem();
+        })
+    </script>
+
+</body>
+</html>

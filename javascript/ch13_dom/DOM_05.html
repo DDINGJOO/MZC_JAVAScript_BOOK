@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of DOM(Document Object Model</title>
+</head>
+<body>
+    <div id = 'div'></div>
+
+    <script>
+        const pElement = document.createElement('p');
+        const textNode = document.createTextNode('Hello, World!');
+
+        pElement.appendChild(textNode);
+        document.getElementById('div').appendChild(pElement);
+
+
+        console.log(div.innerHTML)
+
+
+
+
+    </script>
+
+</body>
+</html>

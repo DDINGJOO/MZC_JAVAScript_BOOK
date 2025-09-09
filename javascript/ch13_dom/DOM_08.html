@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of DOM</title>
+</head>
+<body>
+
+<div id = 'div'>Hello</div>
+
+<div id = 'div1'>
+    <p>First</p>
+    <p>Second</p>
+    <p>Third</p>
+</div>
+
+<script>
+    const div = document.getElementById('div');
+
+    setTimeout(() => {
+        div.removeChild(div.firstChild);
+    }, 2000);
+
+
+    const div1 = document.getElementById('div1');
+    setTimeout(() => {
+        div1.removeChild(div1.firstChild.nextSibling);
+        div1.removeChild(div1.lastChild.previousSibling);
+    },1000)
+
+
+
+</script>
+
+</body>
+</html>
