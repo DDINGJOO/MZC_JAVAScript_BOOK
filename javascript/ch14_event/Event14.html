@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of JavaScript 기본 이벤트 동작</title>
+
+
+</head>
+<body>
+<form id = 'loginForm' action = "https://google.com" method = "POST">
+    id : <input type = "text" name = "userId" id = "id"/> <br/>
+    pwd : <input type="password" name = "userPwd" id = "pwd"/> <br/>
+    <button id = 'btn' type = "submit">Login</button>
+</form>
+
+
+<script>
+    const form = document.getElementById('loginForm');
+    const btn = document.getElementById('btn');
+
+
+    form.addEventListener('submit',(e) => {
+        const id = document.getElementById('id').value.trim();
+        const pwd = document.getElementById('pwd').value.trim();
+        console.log(`id : ${id}\tpwd : ${pwd}`);
+
+        console.log("call submit");
+        // 기본 동작 중 (폼 전송)을 취소한다.
+
+        if(id === '' || pwd === '')
+        {
+            alert("아이디, 비밀번호를 모두 입력하여 주십시오. ");
+            e.preventDefault();
+        }
+    });
+
+</script>
+</body>
+</html>
