@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of JavaScriptEvent Handler</title>
+</head>
+<body>
+    <button type="button" onclick="hello(event)"> Click</button>
+
+    <script>
+        function hello(e){
+            console.log('this : ', this) // window
+            console.log('event Type: ', e.type) // click
+            console.log('event Target: ', e.target) // button
+            console.log('event Target: ', e.currentTarget) // button // 이벤트 리스터가 등록된 요소
+         }
+    </script>
+</body>
+</html>
