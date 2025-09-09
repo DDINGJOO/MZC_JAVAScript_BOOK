@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of JavaScript Event Handler</title>
+
+</head>
+    <body>
+    <button id = 'btn' type="button" name ="clickBtn"> Click</button>
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', (e) => {
+            console.log('this' , this); // window  // arrow function
+            console.log('this' , this.id); // undefined
+            console.log('this' , this.type); // undefined
+            console.log('event type ' , e.type); // click
+            console.log('event target ' , e.target); //<button id="btn" type="button"> Click</button>/
+            console.log('event target id ' , e.target.id); // btn
+            console.log('event target name ' , e.target.name);
+            console.log('event target type ' , e.target.type); // button
+        });
+
+    </script>
+    </body>
+</html>

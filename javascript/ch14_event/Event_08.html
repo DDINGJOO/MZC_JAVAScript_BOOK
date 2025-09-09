@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of JavaScript Event Handler</title>
+
+</head>
+    <body>
+        <button id ='btn' type = "button" style="width: 100px; height:30px;">Click me</button>
+        <button id ='btn2' type = "button" style="width: 100px; height:30px;">Click me</button>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const btn2 = document.getElementById('btn2');
+        btn.addEventListener('click', changeColor('yellow'),false);
+        btn2.addEventListener('click', function (e) {
+            changeColor2(e,'red');
+        });
+
+        function changeColor2(e, colorName)
+        {
+            e.currentTarget.style.backgroundColor = colorName;
+        }
+
+
+
+        function  changeColor(colorName){
+            return function(e)
+            {
+                e.target.style.backgroundColor = colorName;
+            }
+        }
+    </script>
+
+    </body>
+</html>
