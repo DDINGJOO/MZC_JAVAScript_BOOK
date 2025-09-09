@@ -50,13 +50,13 @@
                 console.log('call div1') // call1
             });
 
-            div2.addEventListener('click', () => {
+            div2.addEventListener('click', (e) => {
                 console.log('call div2') // call2 call1
+                // e.stopPropagation(); // call2 // 있으면 전파 중단  3번 눌러도 call3 call2
             });
             div3.addEventListener('click', () => {
                 console.log('call div3') // call 3 call2 call1
             });
-
 
 
         </script>
