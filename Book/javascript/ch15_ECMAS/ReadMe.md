@@ -23,3 +23,12 @@
   - var arr = Array.prototype.slice.call(arguments);
   - var arr = Array.from(arguments); // ES6
   - var arr = [...arguments]; // spread operator
+
+
+
+---
+
+## Arrow Function
+
+- 항상 this 가리키는는거 유의 하면서 코딩하기
+

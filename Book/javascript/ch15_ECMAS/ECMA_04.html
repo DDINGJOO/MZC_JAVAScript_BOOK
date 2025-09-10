@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>
+<script>
+    //Arrow Function
+    const user = {
+        username : 'Alice',
+        age : 25,
+        userInfo: function(){
+            console.log(`call userInfo\nusernmae :  ${this.username}\nage : ${this.age}`);
+            console.log("this : ",this) // user
+        }
+    }
+
+    const userUsingArrowFunction = {
+        username : 'Alice',
+        age : 25,
+        userInfo: () =>{
+            console.log(`call userUsingArrowFunction\nusernmae :  ${this.username}\nage : ${this.age}`); //undefined
+            console.log("this : ",this) // window
+        }
+    }
+
+    const userUsingArrowFunction2 = {
+        username : 'Alice',
+        age : 22,
+    }
+    Object.prototype.userInfoUsingPrototype= function (){
+        console.log(`call userUsingArrowFunction2\nusernmae :  ${this.username}\nage : ${this.age}`);
+        console.log("this : ",this)  // calling object
+    }
+
+
+    user.userInfo();
+    userUsingArrowFunction.userInfo();
+    userUsingArrowFunction2.userInfoUsingPrototype();
+    user.userInfoUsingPrototype(); // 다른 객체도 접근 가능
+</script>
+
+
+
+</body>
+</html>
