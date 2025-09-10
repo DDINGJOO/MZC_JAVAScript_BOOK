@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Asynchronous</title>
+</head>
+    <body>
+        <script>
+
+            // Promise 객체 생성
+            const myPromise = new Promise((resolve, reject) => { // call-back function
+
+                const isSuccess = false; // processed result
+
+                setTimeout(() => {
+                    if(isSuccess) {
+                        resolve("비동기 작업 성공!!");
+                    }else
+                    {
+                        reject("비동기 작업 실패!!");
+                    }
+                },2000);
+            });
+            myPromise.then(
+                (result) => {
+                    console.log(result);
+                }
+
+            ).catch(
+                (error) => {
+                    console.log(error);
+                }
+            );
+
+
+
+        </script>
+
+    </body>
+</html>

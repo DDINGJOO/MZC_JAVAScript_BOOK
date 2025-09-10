@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Asynchronous</title>
+</head>
+<body>
+<script>
+
+    // 비동기 처리를 통한 배열정렬(TimeSort)
+    const intArr = [1, 2, 3, 5,4,10,8,5,2];
+    const max = Math.max(...intArr);
+    let sortedArr = [];
+
+
+    // Processing
+    for(let i = 0; i < intArr.length; i++){
+        setTimeout(() => {
+            sortedArr.push(intArr[i]);
+        },intArr[i]);
+    }
+
+
+    // Result
+    setTimeout(() => {
+        console.log(sortedArr);
+    },max+100); // saltedArr = [1,2,2,3,4,5,5,8,10]
+    console.log( sortedArr) // [ ]
+
+</script>
+
+</body>
+</html>

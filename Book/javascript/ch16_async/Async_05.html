@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of PromiseChaining</title>
+</head>
+<body>
+
+    <script>
+        function firstTask(){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("First Task");
+                    resolve('First Result');
+                }, 1000);
+            })
+        };
+        function secondTask(result){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("Second Task");
+                    resolve('Second Result');
+                },1000)
+            })
+        };
+        function thirdTask(result){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("Third Task");
+                    resolve('Third Result');
+                })
+            },1000)
+        };
+
+        const runTasks = async () => {
+            try{
+                const result = await firstTask();
+                console.log( result)
+                const result2 = await secondTask(result);
+                console.log(result2);
+                const result3 = await thirdTask(result2);
+                console.log(result3);
+            }
+            catch(err){
+                console.log(err);
+            }
+        }
+
+        runTasks();
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of Asynchronous</title>
+</head>
+    <body>
+        <script>
+            //async , await
+
+            function fetchData(){
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        const isSuccess = true
+                        if(isSuccess){
+                            resolve('데이터 도착')
+                        }else{
+                            reject('에러')
+                        }
+                    }, 2000)
+                })
+            }
+
+            const getData = async () => {
+                console.log("데이터 요청");
+                try{
+                    const result = await fetchData() // async -> await 필수 관계 매핑 > Promise 객체 반환
+                    console.log('result : ', result);
+                }catch (error){
+                    console.log('error' , error);
+                }
+            }
+
+            getData();
+
+        </script>
+
+    </body>
+</html>
