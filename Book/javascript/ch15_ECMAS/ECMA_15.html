@@ -6,6 +6,13 @@
 </head>
 <body>
 <script>
+    //Object Destructuring
+    function printPeople({name, family: {mother, father}}){
+        //이름 , 아빠이름, 엄마 이름 출력
+        console.log(`name : ${name},\n\tfamily: \n\t\tmother : ${mother},\n\t\tfather : ${father}`);
+
+    }
+
     var people =
         {
             name: 'Mike Smith',
@@ -14,6 +21,8 @@
                 father: 'Harry Smith'
             }
         };
+
+    printPeople(people);
 
 
 
