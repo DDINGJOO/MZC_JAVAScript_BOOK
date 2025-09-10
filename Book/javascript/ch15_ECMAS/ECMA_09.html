@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of ECMAScript</title>
+</head>
+    <body>
+        <script>
+            // Spread Operator
+            let arr = [1, 2, 3, 4, 5];
+            let arr2 = [6, 7, 8, 9, 10];
+            let arr3 = [...arr, ...arr2];
+            console.log(arr3); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+            function myFunc(a, b, c) {
+                return a + b + c;
+            }
+
+            const intArr = [1,2,3];
+            console.log(myFunc(...intArr)); // 6
+            const intArr2 = [1,2];
+            console.log(myFunc(...intArr2)); // NaN > 1 + undefined + 2 = NaN
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of ECMAScript</title>
+</head>
+    <body>
+        <script>
+            let lastName = "last name";
+            var person = {
+                "first name": "Alice", // 필드 이름에 공백이 있는 경우
+                [lastName]: "Smith",
+                toString() {
+                    return `first name : ${this["first name"]}, ${lastName} ${this[lastName]}`;
+                }
+            }
+
+            console.log(person.toString()); // first name : Alice, last name Smith //변경된 프로퍼티 이름으로 들어감
+            console.log(person["last name"]); // 요렇게 프로퍼티 이름을 수정하기도 함
+            console.log(person.lastName) // undefined
+
+        </script>
+    </body>
+</html>

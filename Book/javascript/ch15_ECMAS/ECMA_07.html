@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of ECMAScript</title>
+</head>
+    <body>
+        <script>
+
+            function createPerson(name, age){
+                return {
+                    username:name,
+                    age:age,
+                    toString(){
+                        return `username = ${this.username}, age = ${this.age}`;
+                    }
+                }
+            }
+
+            const user = createPerson("John", 30);
+            console.log(user);
+            console.log(user.username);
+            console.log(user.age);
+            console.log(user.name);
+            console.log(`user.name = ${user.name}\nage = ${user.age}`)
+            console.log(typeof user);
+            console.log(user instanceof Object); // true
+            console.log(toString.call(user))// [object Object]
+            console.log(user instanceof Array); // false
+            console.log(user.toString()); // username = John, age = 30
+
+
+
+        </script>
+    </body>
+</html>

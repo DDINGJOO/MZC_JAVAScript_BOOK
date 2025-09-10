@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>
+<script>
+    // Spread Operator
+    const user  = {
+        username: 'John',
+        age: 25,
+        toString() {
+            return `Username: ${this.username}, Age: ${this.age}`;
+        }
+    }
+
+    let clonedUser = {...user}
+
+    console.log(clonedUser.toString()); // Username: John, Age: 25
+    console.log(user.toString()); // Username: John, Age: 25
+
+    clonedUser.age=10;
+    console.log(clonedUser.toString()); // Username: John, Age: 10 !! DEEP COPY
+    console.log(user.toString()); // Username: John, Age: 25 NOT CHANGED
+
+
+    clonedUser = {...user, age: 15}
+    console.log(clonedUser.toString()); // Username: John, Age: 15
+    console.log(user.toString()); // Username: John, Age: 25 NOT CHANGED
+
+    clonedUser = {...user, email : 'java@test.com'}
+    console.log(clonedUser.email); // java@test.com
+    console.log(user.email); // undefined
+    console.log(clonedUser.toString()); // Username: John, Age: 15 // toString 자체에 email 항목이 없음
+    console.log(user.toString()); // Username: John, Age: 25 NOT CHANGED
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
