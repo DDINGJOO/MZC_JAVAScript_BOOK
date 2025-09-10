@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Examples of ECMAScript</title>
 </head>
-<body>
+    <body>
+        <button id ='btn' type="button">Click</button>
+        <script>
 
-</body>
+            //Arrow function 을 쓰면 안되는 경우
+            const btn = document.getElementById('btn');
+
+            // btn.addEventListener('click', function(e){
+            //     console.log('click');
+            //     console.log('type  :', typeof this) // object
+            //     console.log('type : ',toString.call(this)) //HTMLButtonElement
+            //     console.log('this : ',this) // <button id ='btn' type="button">Click</button>
+            //     console.log('this.id : ',this.id); // btn
+            //     console.log('target : ',e.target); // <button id ='btn' type="button">Click</button>
+            //     console.log("this == e.target : ",this === e.target) //true
+            // },false)
+
+
+            btn.addEventListener('click', (e) => {
+                    console.log('click');
+                    console.log('type  :', typeof this) // object
+                    console.log('type : ',toString.call(this)) //object window
+                    console.log('this : ',this) // window
+                    console.log('this.id : ',this.id); // undefined <- 사용하면 안되는 이유
+                    console.log('target : ',e.target); // <button id ='btn' type="button">Click</button>/ <- 요걸로 참조해야해서 이벤트 객체를 넘겨야함
+                    console.log("this == e.target : ",this === e.target) //false
+                    console.log("e.target.id : ",e.target.id); //btn
+
+            })
+
+
+        </script>
+
+
+
+    </body>
 </html>
