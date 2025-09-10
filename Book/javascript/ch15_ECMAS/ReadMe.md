@@ -40,6 +40,8 @@
 
 ## 스프레드 연산자 
 - 객체 복사(복제) DeepCopy
-- myFuntion(...literable)  // 호출시에 ... 으로 호출
-  - vs Rest Parameters : 스프레드 : 호출시, REST : 선언시 
-- 
+  - myFuntion(...literable)  // 호출시에 ... 으로 호출
+    - vs Rest Parameters : 스프레드 : 호출시, REST : 선언시 
+  - let arr = {...Object} // DEEP COPY 
+- 배열 복제 
+  - let arr = [...Array] // DEEP COPY

@@ -7,10 +7,32 @@
     <body>
         <script>
 
+            const intArr = [1,2,3,4,5];
+            const clonedArr  =   [...intArr];
+
+            console.log( intArr) // [1,2,3,4,5]
+            console.log( clonedArr) // [1,2,3,4,5]
+
+            clonedArr.map( (item, index) => {
+                clonedArr[index] = item * 2;
+            });
+
+            console.log( intArr) // [1,2,3,4,5] // NOT CHANGED
+            console.log( clonedArr) // [2,4,6,8,10]
 
 
+            const clonedArr2 = intArr // 얕은 복사
+            clonedArr2.map( (item, index) => {
+                clonedArr2[index] = item * 3;
+            })
+
+            console.log(clonedArr2) // [3,6,9,12,15]
+            console.log(intArr)  // [3,6,9,12,15] // CHANGED
+            console.log(clonedArr) // [2,4,6,8,10] // NOT CHANGED
 
 
+            const clonedArr3 = [...intArr, ...clonedArr];
+            console.log(clonedArr3) // [3,6,9,12,15,2,4,6,8,10]
 
 
         </script>
