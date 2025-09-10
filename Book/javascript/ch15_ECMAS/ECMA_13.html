@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of ECMAScript</title>
+</head>
+<body>
+<script>
+
+    function printUser ({username, age}){
+        console.log(`Username: ${username}, Age: ${age}`)
+    }
+    // printUser(user); //hoisting 으로 인해 접근 불가
+
+    const user = {
+        username : 'Alice',
+        age: 10
+    }
+    printUser(user); //Username: Alice, Age: 10
+</script>
+</body>
+</html>

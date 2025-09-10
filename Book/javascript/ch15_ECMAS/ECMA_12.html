@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examples of ECMAScript</title>
+</head>
+    <body>
+        <script>
+            // Object Destructuring
+            const person = {
+                name: 'John',
+                age: 30,
+                city: 'New York'
+            };
+            const {name, age} = person; // name과 age에만 변수에 값이 들어간다.
+            console.log(name, age); // John 30
+            console.log(city); // Uncaught ReferenceError: city is not defined
+
+
+
+        </script>
+    </body>
+</html>

@@ -45,3 +45,7 @@
   - let arr = {...Object} // DEEP COPY 
 - 배열 복제 
   - let arr = [...Array] // DEEP COPY
+
+- Array Destructuring
+	- 배열이나 객체의 속성을 해체 하여 그 값을 개별 변수에 담을 수 있게 하는 JS 표현식
+    - 
