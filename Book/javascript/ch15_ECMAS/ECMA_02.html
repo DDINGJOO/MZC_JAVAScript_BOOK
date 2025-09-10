@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Examples of ECMAScript</title>
 </head>
 <body>
+<script>
+    function add(){
+        console.log(arguments);
+        console.log(arguments.length);
+        console.log(typeof arguments); // object // 유사배열 객체 // 배열은 아닌데 배열처럼 동작 -> for문 사용가능 / 반복자는 있나보넹..
+        console.log(Array.isArray(arguments));// false
+        console.log(toString.call(arguments)); // [object Arguments]
+
+        let total =0;
+        for(let i = 0 ; i<arguments.length; i++){
+            total += arguments[i];
+        }
+        console.log(total);
+        total =0;
+
+
+        const arr = Array.from(arguments); // 배열로 변환
+        arr.forEach(function(item){
+            total += item;
+        });
+        console.log(total);
+
+
+        console.log(arr.reduce(function(prev, curr){
+            return prev + curr;
+        },0));
+
+
+    };
+    // add(1,2,3,4,5);
+    add(1,2);
+
+
+
+</script>
+
+
 
 </body>
 </html>
