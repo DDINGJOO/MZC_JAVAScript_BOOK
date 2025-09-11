@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of This</title>
+</head>
+<body>
+
+    <script>
+        // 객체 리터럴을 이요한 객체 생성
+        const person = {
+            usnerName : 'Alice',
+            age : 20,
+            
+            getPerson() {
+                console.log('this in reteral :  ',this); // Object , person
+                console.log(`Person : {userName = ${this.usnerName} , age = ${this.age}}`);
+            }
+        };
+
+        person.getPerson();
+
+    </script>
+    
+</body>
+</html>

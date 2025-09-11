@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of binding</title>
+</head>
+<body>
+    <script>
+
+        const apple = {
+            name : '사과'
+        };
+
+        const banana = {
+            name : '바나나'
+        };
+
+
+        function update(color, price)
+        {
+            this.color = color;
+            this.price = price;
+        }
+
+        function whatIsThis(){
+            console.log('this : ', this);
+        }
+
+        // whatIsThis(); // windows
+        // whatIsThis.call(apple); //{name : '사과'}
+        // whatIsThis.apply(banana); // {name : '바나나'}
+
+
+        // update.call(apple, 'red', '1000');
+
+        // whatIsThis.call(apple); // {name: '사과', color: 'red', price: '10000'}
+
+        // update.apply(banana, ['yellow',2000]);
+        // console.log(banana);{name: '바나나', color: 'yellow', price: 2000}
+        
+        // apply vs call : 파라미터에 아규먼트 -> 배열 or 각각
+
+
+        // 바인드 : 다리엑트로 바인딩 
+            // 업데이트의 this 를 apple 로 바인딩
+        const update1 = update.bind(apple);
+
+        console.log('update1 : ', typeof update1);
+        
+        console.log('update1 : ', update1);
+        
+        update1('빨강', 10000);
+
+        console.log(apple);
+        
+
+
+    </script>
+    
+</body>
+</html>

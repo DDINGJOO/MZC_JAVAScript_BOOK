@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Built-in Object :  String</title>
+</head>
+<body>
+    <script>
+        const date = '2025-09-05';
+        let year = date.substring(0,4);
+        console.log('year : ', year); // 2025
+
+        year = date.slice(0,4);
+        console.log('year : ', year); // 2025
+        year = date.slice(0,-6);
+        console.log('year : ', year); // 2025
+        year = date.substr(0,4); // start , count
+        console.log('year : ', year); // 2025
+
+
+        let month = date.substring(5,7);
+        console.log(month);
+        month = date.slice(5,7);
+        console.log(month);
+        month = date.slice(5,7);
+        console.log(month);
+        month =date.substr(5,2);
+        console.log(month);
+
+
+    </script>
+</body>
+</html>
