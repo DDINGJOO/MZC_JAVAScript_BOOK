@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Callback Function</title>
+</head>
+<body>
+    <script>
+        function add(nParm1, nParm2, callback)
+        {
+            console.log('nParam1 :', nParm1);
+            console.log('nParam2 : ', nParm2);
+            console.log('collback : ', callback);
+            
+            
+            
+            const result = nParm1 + nParm2;
+            callback(result); 
+        }
+
+        function printConsole(nParam)
+        {
+            console.log(`value : ${nParam}`);
+        }
+
+
+        add(1,5, printConsole);
+
+    </script>
+    
+</body>
+</html>

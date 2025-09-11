@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Nested Function</title>
+</head>
+<body>
+    <script>
+
+        function outer(){
+            // Local var
+            let preix = 'PREIX : '
+
+            function inner(str) {
+                return preix + str;
+            }
+
+            return inner;
+        }
+
+
+
+        const innerFunc = outer();
+        console.log(`inder Func :  ${innerFunc}`);
+
+        // inner('string'); // func_08.html:27 Uncaught ReferenceError: inner is not defined
+
+        console.log(innerFunc('홍길동'));
+        console.log(outer()('dding')) // ㅁㅊ 개쩐다...
+        
+        
+
+
+    </script>
+    
+</body>
+</html>

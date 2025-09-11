@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Arrow Function</title>
+</head>
+<body>
+    <script>
+
+        function printArray(array, func)
+        {
+            array.forEach(element => {
+                func(element);    
+            });
+        }
+
+        // function printConsoleForArray(num){
+        //     console.log(`number : ${num}`);
+            
+        // }
+        const intArr = [1,2,3,4,5];
+
+
+        // printArray(intArr, ()=>intArr.forEach(element => {
+        //     console.log(element);}));
+
+
+        printArray(intArr, (number) => console.log(`number : ${number}`));
+
+
+        intArr.forEach((value, index) => {
+            console.log(`value : ${value}, index : ${index}`)
+        })
+
+
+
+    </script>
+    
+</body>
+</html>

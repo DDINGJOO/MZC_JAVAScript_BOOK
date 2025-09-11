@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of function</title>
+</head>
+<body>
+    <script>
+        const add3 = addByliteral
+        const addByliteral = add;
+        // 두개의 정수의 합을 구해서 반환하는 함수 
+        function add(nParm1, nParm2)
+        {
+      
+            const num1 = parseInt(nParm1);
+            const num2 = parseInt(nParm2);
+            return num1+num2; 
+        }
+
+
+
+        
+
+        const nNum1 = 1;
+        const nNum2 = 2;
+
+        const result = add(nNum1, nNum2);
+        const result3 = add3(nNum1, nNum2);
+        const result2 =addByliteral(nNum1,nNum2);
+        console.log(result);
+        console.log(result2);
+        console.log(result3)
+        
+
+    </script>
+    
+</body>
+</html>

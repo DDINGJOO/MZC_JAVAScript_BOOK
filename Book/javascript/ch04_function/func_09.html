@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Nest Function FEAT CLOSER</title>
+</head>
+<body>
+    <button id = 'btn', type = 'button'>Click</button>
+    <div id = 'div'></div>
+
+
+    <script>
+
+        const div = document.getElementById('div');
+        const btn = document.getElementById('btn');
+        {
+            let count = 0;
+            btn.addEventListener('click', function(){
+                div.innerHTML = `<h3> ${++count} </h3>`
+            });
+        }
+
+        
+        count = 100;
+
+
+    </script>
+    
+</body>
+</html>
