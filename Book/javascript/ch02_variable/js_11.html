@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Hoisting</title>
+</head>
+<body>
+    <script>
+        //Temporary Dead Zone
+
+        // 선언은되었지만, 초기화 되지않았기에 접근은 불가.
+        // console.log('username : ', username);
+
+
+        
+        let username;
+        let username1 = undefined //?
+        console.log('username : ', username);
+        console.log('username1 : ', username1);
+        username =10;
+
+
+        username1 =10;
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of variable scope</title>
+</head>
+<body>
+    <script>
+
+
+        {
+            let username = 'dding'; // block scope
+            console.log('username : ' , username);
+        }
+
+        console.log('username : ' , username); //ReferenceError : username is not defined
+
+        
+
+    </script>
+    
+</body>
+</html>

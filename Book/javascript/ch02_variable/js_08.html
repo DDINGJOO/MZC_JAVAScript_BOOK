@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of variable scope</title>
+</head>
+<body>
+    
+    <script>
+
+        {
+            const username = 'dding' // <- block scope
+            console.log('username : ', username);
+            
+        }
+
+        console.log('username : ', username); // Reference Error
+
+
+
+        // Hoisting 
+            /*
+                var , let, const 스코프의 가장 상단으로, 변수 선언, 함수선언을 끌어올림
+            */
+
+    </script>
+        
+</body>
+</html>

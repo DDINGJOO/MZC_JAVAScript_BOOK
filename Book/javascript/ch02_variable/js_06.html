@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of variable scope</title>
+</head>
+<body>
+    <script>
+
+        var str = 'hello, '; // 전역 변수
+
+        function hello(username)
+        {
+            var str1 = "Hi , " // 지역 변수
+            return str1 + str+ username;
+        }
+
+        console.log(hello('dding'));
+
+        console.log('str : ' , str);
+        
+        
+    </script>
+</body>
+</html>

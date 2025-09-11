@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples of Hoisting</title>
+</head>
+<body>
+    <script>
+
+        console.log('str : ', str);  // undifined <- 선언은 되어있는데 값이 할당 되지 않음 (Hoisting : 변수선언이 최상단으로 올라가니까! )
+        var str = 'hello, '; // 전역 변수
+
+
+
+        /* 
+        이렇게 바뀜
+            var str; == vat str = undifined;
+            console.log('str : ', str);
+            str = 'hello, '
+        */
+        
+    </script>
+</body>
+</html>

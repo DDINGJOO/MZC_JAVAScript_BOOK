@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for DayaType</title>
+</head>
+<body>
+    <script>
+
+        function hello(username)
+        {
+            return 'Hello'  + username;
+        }
+
+
+        const member = {
+            email:'java@teambind.co.kr',
+            age: 10
+        }
+
+
+        // 배열
+        const colors = ['red','green' , 'blue'];
+
+
+        let isMarried = false;
+        let age;
+        let username = '홍길동';
+        let height = 180;
+
+
+    
+
+
+        console.log('isMarried : ', isMarried);
+        console.log('age : ', age); //undifined
+        console.log('username : ', username);
+        console.log('height : ', height);
+
+
+
+        console.log('isMarried : ', typeof isMarried);
+        console.log('age : ', typeof age); //undifined
+        console.log('username : ',typeof username);
+        console.log('height : ', typeof height);
+
+        console.log('hello function: ' , hello);
+        console.log('hello function datatype : ', typeof hello);
+        console.log('hello function object Type : ' , toString.call(hello));
+
+
+        console.log('member : ' ,member)
+        console.log('member datatyp : ' , typeof member)
+        console.log('member Object Type', toString.call(member));
+
+        console.log('colors : ' , colors)
+        console.log('colors : ' ,typeof colors)
+        console.log('colors Object Type : ', toString.call(colors));
+
+        age=10;
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

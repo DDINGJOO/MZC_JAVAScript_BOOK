@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples for Operatiors</title>
+</head>
+<body>
+    <script>
+        //falsy  값들
+        console.log(result);
+
+
+        // 자바 스크립트는 왼쪽에서 오른쪽으로 수행중 가장 먼저 걸리는 항목 반환 / 끝까지 탐색시 마지막 값
+        console.log(null || 5); //return false X -> 5
+        
+        
+
+        function hello(username){
+
+            username = username || 'empty'; // 단축평가 활용 
+            return 'Hello, ' + username;
+        
+        }
+
+
+        console.log(hello('dding'));
+        console.log(hello());
+        console.log(hello(''));
+        
+        
+
+    </script>
+    
+</body>
+</html>
